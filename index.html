@@ -8,36 +8,37 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
         <script src="angular/angular.min.js"></script>
         <script src="angular/angular-route.min.js"></script>
+        <script src="angular/angular-sanitize.min.js"></script>
         <script src="app/app.js"></script>
-        <script src="app/routes.js"></script>
         <script src="app/controllers/main.js"></script>
+        <script src="app/components/about-s1.js"></script>
+        <script src="app/components/about-s2.js"></script>
+        <script src="app/components/contact-form.js"></script>
+        <script src="app/components/contact-s1.js"></script>
+        <script src="app/components/contact-s2.js"></script>
+        <script src="app/components/footer.js"></script>
+        <script src="app/components/gallery-s1.js"></script>
+        <script src="app/components/gallery-s2.js"></script>
+        <script src="app/components/index-s1.js"></script>
+        <script src="app/components/login-form.js"></script>
+        <script src="app/components/menu-s1.js"></script>
+        <script src="app/components/menu-s2.js"></script>
+        <script src="app/components/menu-s3.js"></script>
+        <script src="app/components/navbar.js"></script>
+        <script src="app/components/register-form.js"></script>
         <title></title>
     </head>
-    <body data-ng-controller="main-ctrl">
-        <header class="fixed-top w-100">
-            <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
-                <a href="index.html" class="navbar-brand">
-                    <img class="img-fluid" src="img/logo.png" alt="page logo"/>
-                </a>
-            </nav>
-        </header>
-        <div data-ng-view></div>
-        <footer class="container-fluid bg-dark d-flex align-items-center py-3">
-            <div class="row w-100 mx-auto">
-                <div class="col-12 text-center">
-                    <p class="text-white small mb-0">
-                        Copyright &copy;2022 Tomasz Pankowski. 
-                        <a href="#!/privacy" class="text-decoration-none text-white">
-                            Privacy&nbsp;policy
-                        </a>
-                    </p>
-                </div>
+    <body class="bg-secondary"
+        data-ng-controller="main-ctrl" data-ng-cloak>    
+        <app-navbar></app-navbar>
+        <main class="ng-view">
+            <div class=" text-center">
+                <span class="spinner spinner-border text-light"></span>
+                <p class="text-white fw-bold">Loading...</p>
             </div>
-        </footer>
-        <noscript>
-            This website requires javascript enabled in your browser
-        </noscript>
+        </main>
+        <app-footer></app-footer>
         <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>    
     </body>
 </html>
